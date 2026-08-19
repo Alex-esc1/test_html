@@ -162,7 +162,6 @@
       position: relative;
     }
 
-    /* ===================== NAV ===================== */
     #site-nav {
       position: sticky;
       top: 0;
@@ -184,6 +183,7 @@
       align-items: center;
       gap: 10px;
       color: var(--paper);
+      cursor: pointer;
     }
 
     .brand-mark {
@@ -228,7 +228,6 @@
       display: none;
     }
 
-    /* ===================== HERO ===================== */
     #hero {
       background: var(--ink);
       color: var(--paper);
@@ -294,7 +293,6 @@
       flex: none;
     }
 
-    /* Signature: catalog card stack */
     .catalog-stage {
       position: relative;
       height: 420px;
@@ -437,7 +435,6 @@
       }
     }
 
-    /* ===================== SECTION SHELL ===================== */
     section {
       padding: 96px 0;
     }
@@ -469,7 +466,6 @@
       color: var(--paper-70);
     }
 
-    /* ===================== HOW IT WORKS ===================== */
     .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -499,7 +495,6 @@
       margin: 0;
     }
 
-    /* ===================== SHOWCASE ===================== */
     .showcase {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -615,7 +610,6 @@
       margin-bottom: 6px;
     }
 
-    /* ===================== FEATURE GRID ===================== */
     .feat-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -649,7 +643,6 @@
       margin: 0;
     }
 
-    /* ===================== CODE BLOCK ===================== */
     .embed-block {
       background: var(--ink);
       border-radius: var(--radius);
@@ -681,7 +674,6 @@
       color: #D4A855;
     }
 
-    /* ===================== TESTIMONIALS ===================== */
     .quotes {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -708,7 +700,6 @@
       font-family: var(--sans);
     }
 
-    /* ===================== PRICING ===================== */
     #pricing {
       background: var(--ink);
       color: var(--paper);
@@ -806,7 +797,6 @@
       margin-top: 1px;
     }
 
-    /* ===================== FOOTER ===================== */
     footer {
       padding: 48px 0;
       border-top: 1px solid var(--paper-line);
@@ -833,7 +823,6 @@
       font-family: var(--mono);
     }
 
-    /* ===================== APP SHELL ===================== */
     #view-landing,
     #view-app,
     #view-onboarding {
@@ -868,6 +857,7 @@
       align-items: center;
       gap: 10px;
       padding: 6px 10px 22px;
+      cursor: pointer;
     }
 
     .app-nav {
@@ -950,6 +940,10 @@
       color: var(--paper-70);
       padding: 10px 12px;
       margin-top: 6px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
     }
 
     .back-to-site:hover {
@@ -1486,7 +1480,6 @@
       height: 14px;
     }
 
-    /* ===================== WORKSPACE / BREADCRUMB ===================== */
     .app-workspace {
       display: flex;
       align-items: center;
@@ -1522,7 +1515,6 @@
       font-family: var(--sans);
     }
 
-    /* ===================== SOURCES QUOTA ===================== */
     .quota-box {
       margin-top: 8px;
     }
@@ -1550,7 +1542,6 @@
       transition: width .4s ease;
     }
 
-    /* ===================== TOAST ===================== */
     #toast {
       position: fixed;
       bottom: 26px;
@@ -1585,7 +1576,6 @@
       flex: none;
     }
 
-    /* ===================== AUTH MODAL ===================== */
     .auth-overlay {
       position: fixed;
       inset: 0;
@@ -1673,7 +1663,6 @@
       justify-content: center;
     }
 
-    /* ===================== OVERVIEW ===================== */
     .ov-greeting {
       font-size: 26px;
       margin-bottom: 4px;
@@ -1746,7 +1735,6 @@
       letter-spacing: 0;
     }
 
-    /* ===================== ANALYTICS ===================== */
     .an-topq {
       background: #fff;
       border: 1px solid var(--paper-line);
@@ -1786,7 +1774,6 @@
       color: var(--ink-70);
     }
 
-    /* ===================== BOT SWITCHER (chat) ===================== */
     .bot-switch {
       position: relative;
       display: inline-flex;
@@ -1837,7 +1824,6 @@
       background: var(--paper-dim);
     }
 
-    /* ===================== ONBOARDING ===================== */
     #view-onboarding {
       display: none;
       min-height: 100vh;
@@ -2047,7 +2033,6 @@
       margin-bottom: 22px;
     }
 
-    /* ===================== VIDEO DEMO MODAL ===================== */
     .video-frame {
       aspect-ratio: 16/9;
       background: var(--ink-soft);
@@ -2123,15 +2108,10 @@
 </head>
 
 <body>
-
-  <!-- ============================================================ -->
-  <!-- LANDING VIEW -->
-  <!-- ============================================================ -->
   <div id="view-landing">
-
     <nav id="site-nav">
       <div class="wrap">
-        <div class="brand">
+        <div class="brand" onclick="goLanding()">
           <div class="brand-mark">D</div>
           <div class="brand-name">Docent</div>
         </div>
@@ -2146,7 +2126,6 @@
         </div>
       </div>
     </nav>
-
     <header id="hero">
       <div class="wrap">
         <div>
@@ -2191,7 +2170,6 @@
         </div>
       </div>
     </header>
-
     <section id="how">
       <div class="wrap">
         <div class="section-head">
@@ -2220,7 +2198,6 @@
         </div>
       </div>
     </section>
-
     <section id="showcase" class="on-ink">
       <div class="wrap">
         <div class="section-head">
@@ -2258,7 +2235,6 @@
         </div>
       </div>
     </section>
-
     <section>
       <div class="wrap">
         <div class="section-head">
@@ -2317,7 +2293,6 @@
         </div>
       </div>
     </section>
-
     <section>
       <div class="wrap">
         <div class="section-head">
@@ -2334,7 +2309,6 @@
         </div>
       </div>
     </section>
-
     <section>
       <div class="wrap">
         <div class="section-head">
@@ -2355,7 +2329,6 @@
         </div>
       </div>
     </section>
-
     <section id="pricing">
       <div class="wrap">
         <div class="section-head">
@@ -2442,10 +2415,9 @@
         </div>
       </div>
     </section>
-
     <footer>
       <div class="wrap">
-        <div class="brand">
+        <div class="brand" onclick="goLanding()">
           <div class="brand-mark">D</div>
           <div class="brand-name" style="color:var(--ink);">Docent</div>
         </div>
@@ -2454,15 +2426,10 @@
         <div class="foot-note">Prototype — no data leaves your browser</div>
       </div>
     </footer>
-
   </div>
-
-  <!-- ============================================================ -->
-  <!-- ONBOARDING -->
-  <!-- ============================================================ -->
   <div id="view-onboarding">
     <div class="ob-top">
-      <div class="brand">
+      <div class="brand" onclick="goLanding()">
         <div class="brand-mark">D</div>
         <div class="brand-name">Docent</div>
       </div>
@@ -2473,7 +2440,6 @@
     </div>
     <div class="ob-stage">
       <div class="ob-card">
-
         <div class="ob-step active" id="ob-step-1">
           <span class="ob-eyebrow">Step 1 of 3</span>
           <h2>What should your chatbot be called?</h2>
@@ -2485,7 +2451,6 @@
             <button class="btn btn-brass" onclick="obNext(2)">Continue →</button>
           </div>
         </div>
-
         <div class="ob-step" id="ob-step-2">
           <span class="ob-eyebrow">Step 2 of 3</span>
           <h2>Upload your first document</h2>
@@ -2511,7 +2476,6 @@
             <button class="btn btn-brass" onclick="obNext(3)">Continue →</button>
           </div>
         </div>
-
         <div class="ob-step" id="ob-step-3">
           <div class="ob-done-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2527,14 +2491,9 @@
             <button class="btn btn-brass" onclick="goApp('chat')">Test it now →</button>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
-  <!-- ============================================================ -->
-  <!-- VIDEO DEMO MODAL -->
-  <!-- ============================================================ -->
   <div class="auth-overlay" id="videoModal">
     <div class="auth-modal" style="max-width:560px;">
       <button class="auth-close" onclick="closeVideo()">
@@ -2555,14 +2514,9 @@
       <p class="auth-hint">Placeholder — the walkthrough video will be linked here.</p>
     </div>
   </div>
-
-  <!-- ============================================================ -->
-  <!-- APP VIEW -->
-  <!-- ============================================================ -->
   <div id="view-app">
-
     <aside class="app-sidebar">
-      <div class="app-brand">
+      <div class="app-brand" onclick="goLanding()">
         <div class="brand-mark">D</div>
         <div class="brand-name">Docent</div>
       </div>
@@ -2623,17 +2577,14 @@
         <button class="btn btn-brass btn-sm" style="width:100%; margin-top:12px;"
           onclick="openPaywall('plan')">Upgrade</button>
       </div>
-      <a class="back-to-site" href="#" onclick="goLanding();return false;">← Back to site</a>
+      <button class="back-to-site" onclick="goLanding()">← Back to site</button>
     </aside>
-
     <main class="app-main">
       <div class="app-topbar">
         <div class="crumb">Bramble Co. / <b id="app-title">Overview</b></div>
         <div class="avatar">AK</div>
       </div>
       <div class="app-body">
-
-        <!-- OVERVIEW -->
         <div class="app-subview" id="app-overview">
           <div class="ov-greeting">Good evening, Alex.</div>
           <div class="ov-sub">Bramble Care answered 312 questions this week without a single ticket.</div>
@@ -2693,8 +2644,6 @@
             </div>
           </div>
         </div>
-
-        <!-- CHATBOTS -->
         <div class="app-subview" id="app-chatbots">
           <p style="color:var(--ink-70); font-size:14px; margin:0;">One workspace, as many products as you're testing
             this week.</p>
@@ -2735,8 +2684,6 @@
             </div>
           </div>
         </div>
-
-        <!-- UPLOAD -->
         <div class="app-subview" id="app-upload">
           <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Documents</p>
           <div class="dropzone">
@@ -2797,8 +2744,6 @@
             </div>
           </div>
         </div>
-
-        <!-- CHAT -->
         <div class="app-subview" id="app-chat">
           <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Test chat — this is exactly
             what customers see</p>
@@ -2846,8 +2791,6 @@
             </div>
           </div>
         </div>
-
-        <!-- EMBED -->
         <div class="app-subview" id="app-embed">
           <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Embed on your website</p>
           <div class="embed-layout">
@@ -2898,8 +2841,6 @@
             </div>
           </div>
         </div>
-
-        <!-- ANALYTICS -->
         <div class="app-subview" id="app-analytics">
           <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Last 30 days</p>
           <div class="ov-grid">
@@ -2930,14 +2871,9 @@
                 carry?</span><span class="qcount">61</span></div>
           </div>
         </div>
-
       </div>
     </main>
   </div>
-
-  <!-- ============================================================ -->
-  <!-- PAYWALL MODAL -->
-  <!-- ============================================================ -->
   <div class="pw-overlay" id="paywall">
     <div class="pw-modal">
       <button class="pw-close" onclick="closePaywall()">
@@ -3013,10 +2949,6 @@
       </div>
     </div>
   </div>
-
-  <!-- ============================================================ -->
-  <!-- LOGIN MODAL -->
-  <!-- ============================================================ -->
   <div class="auth-overlay" id="loginModal">
     <div class="auth-modal">
       <button class="auth-close" onclick="closeLogin()">
@@ -3037,10 +2969,7 @@
       <button class="auth-switch" onclick="closeLogin(); goOnboarding();">No account? Start free →</button>
     </div>
   </div>
-
-  <!-- TOAST -->
   <div id="toast"><span class="tdot"></span><span id="toast-text"></span></div>
-
   <script>
     function goApp(view) {
       document.documentElement.setAttribute('data-route', 'app');
@@ -3057,13 +2986,13 @@
       window.scrollTo(0, 0);
     }
     function obNext(step) {
-      document.querySelectorAll('.ob-step').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.ob-step').forEach(function (el) { el.classList.remove('active'); });
       document.getElementById('ob-step-' + step).classList.add('active');
-      document.querySelectorAll('[data-obdot]').forEach(el => {
+      document.querySelectorAll('[data-obdot]').forEach(function (el) {
         el.classList.toggle('done', Number(el.dataset.obdot) <= step);
       });
       if (step === 3) {
-        const name = document.getElementById('ob-bot-name').value.trim() || 'Your chatbot';
+        var name = document.getElementById('ob-bot-name').value.trim() || 'Your chatbot';
         document.getElementById('ob-done-title').textContent = name + ' is ready to test.';
       }
     }
@@ -3073,13 +3002,14 @@
     }
     function openVideo() { document.getElementById('videoModal').classList.add('open'); }
     function closeVideo() { document.getElementById('videoModal').classList.remove('open'); }
-    const titles = { overview: 'Overview', chatbots: 'Chatbots', upload: 'Documents', chat: 'Test chat', embed: 'Embed widget', analytics: 'Analytics' };
+    var titles = { overview: 'Overview', chatbots: 'Chatbots', upload: 'Documents', chat: 'Test chat', embed: 'Embed widget', analytics: 'Analytics' };
     function setAppView(v) {
       document.documentElement.setAttribute('data-app-view', v);
-      document.querySelectorAll('.app-nav-item').forEach(el => el.classList.toggle('active', el.dataset.appnav === v));
+      document.querySelectorAll('.app-nav-item').forEach(function (el) {
+        el.classList.toggle('active', el.dataset.appnav === v);
+      });
       document.getElementById('app-title').textContent = titles[v] || '';
     }
-
     function openLogin() { document.getElementById('loginModal').classList.add('open'); }
     function closeLogin() { document.getElementById('loginModal').classList.remove('open'); }
     function submitLogin(e) {
@@ -3089,17 +3019,15 @@
       showToast('Welcome back — signed in as Alex');
       return false;
     }
-
-    let toastTimer;
+    var toastTimer;
     function showToast(text) {
-      const t = document.getElementById('toast');
+      var t = document.getElementById('toast');
       document.getElementById('toast-text').textContent = text;
       t.classList.add('show');
       clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+      toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2600);
     }
-
-    const botSeeds = {
+    var botSeeds = {
       bramble: {
         name: 'Bramble Care', icon: 'B',
         messages: [
@@ -3123,14 +3051,14 @@
     };
     function toggleBotSwitch() { document.getElementById('bot-switch-menu').classList.toggle('open'); }
     function switchBot(key) {
-      const bot = botSeeds[key];
+      var bot = botSeeds[key];
       document.getElementById('bot-switch-icon').textContent = bot.icon;
       document.getElementById('bot-switch-name').textContent = bot.name;
       document.getElementById('bot-switch-menu').classList.remove('open');
-      const scroll = document.getElementById('chat-scroll');
+      var scroll = document.getElementById('chat-scroll');
       scroll.innerHTML = '';
-      bot.messages.forEach(m => {
-        const div = document.createElement('div');
+      bot.messages.forEach(function (m) {
+        var div = document.createElement('div');
         div.className = 'msg ' + m.role;
         div.innerHTML = m.text + (m.src ? '<div class="src">↳ ' + m.src + '</div>' : '');
         scroll.appendChild(div);
@@ -3138,15 +3066,9 @@
       showToast('Switched to ' + bot.name);
     }
     document.addEventListener('click', function (e) {
-      const sw = document.getElementById('bot-switch');
-      const menu = document.getElementById('bot-switch-menu');
+      var menu = document.getElementById('bot-switch-menu');
       if (menu && !e.target.closest('.bot-switch')) menu.classList.remove('open');
     });
-
-    function tryLocked(e, view) {
-      e.preventDefault();
-      openPaywall(view);
-    }
     function openPaywall(context) {
       if (context === 'analytics') {
         document.getElementById('pw-title').textContent = 'Analytics is part of the Growth plan';
@@ -3158,61 +3080,57 @@
       document.getElementById('paywall').classList.add('open');
     }
     function closePaywall() { document.getElementById('paywall').classList.remove('open'); }
-
-    let docCount = 48;
-    const docLimit = 50;
+    var docCount = 48;
+    var docLimit = 50;
     function addDoc() {
       docCount++;
-      const row = document.createElement('div');
+      var row = document.createElement('div');
       row.className = 'doc-row';
       row.innerHTML = '<div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F" stroke-width="1.6"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/></svg></div><div><div class="doc-name">New Document.pdf</div><div class="doc-meta">Training on your content…</div></div><div class="chip processing">Processing</div>';
       document.getElementById('doc-list').appendChild(row);
       showToast('Uploading New Document.pdf…');
       updateQuota();
-      setTimeout(() => {
+      setTimeout(function () {
         row.querySelector('.doc-meta').textContent = 'Indexed just now';
         row.querySelector('.chip').className = 'chip ready';
         row.querySelector('.chip').textContent = 'Indexed';
         showToast('New Document.pdf is indexed and live');
       }, 1400);
-      if (docCount > docLimit) { setTimeout(() => openPaywall('docs'), 1600); }
+      if (docCount > docLimit) { setTimeout(function () { openPaywall('docs'); }, 1600); }
     }
     function updateQuota() {
-      const pct = Math.min(100, Math.round((docCount / docLimit) * 100));
+      var pct = Math.min(100, Math.round((docCount / docLimit) * 100));
       document.getElementById('quota-label').textContent = docCount + ' / ' + docLimit + ' pages';
       document.getElementById('quota-fill').style.width = pct + '%';
       document.querySelector('.quota-row span:last-child').textContent = pct + '%';
     }
-
     function sendMsg() {
-      const input = document.getElementById('chat-input');
-      const text = input.value.trim();
+      var input = document.getElementById('chat-input');
+      var text = input.value.trim();
       if (!text) return;
-      const scroll = document.getElementById('chat-scroll');
-      const u = document.createElement('div'); u.className = 'msg user'; u.textContent = text;
+      var scroll = document.getElementById('chat-scroll');
+      var u = document.createElement('div'); u.className = 'msg user'; u.textContent = text;
       scroll.appendChild(u);
       input.value = '';
-      setTimeout(() => {
-        const b = document.createElement('div'); b.className = 'msg bot';
+      setTimeout(function () {
+        var b = document.createElement('div'); b.className = 'msg bot';
         b.innerHTML = "Good question — here's what our docs say, based on the closest match I could find.<div class=\"src\">↳ help.bramble.co</div>";
         scroll.appendChild(b);
         scroll.scrollTop = scroll.scrollHeight;
       }, 500);
       scroll.scrollTop = scroll.scrollHeight;
     }
-
     function setColor(el, color) {
-      document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.swatch').forEach(function (s) { s.classList.remove('active'); });
       el.classList.add('active');
       document.getElementById('live-bubble').style.background = color;
-      document.getElementById('live-panel').style.background = document.getElementById('live-panel').style.background;
       document.getElementById('embed-code-app').textContent = '<script src="https://cdn.docent.chat/widget.js" data-bot="bramble-care" data-color="' + color + '"></' + 'script>';
     }
     function setPos(btn, pos) {
-      document.querySelectorAll('.seg button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.seg button').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      const bubble = document.getElementById('live-bubble');
-      const panel = document.getElementById('live-panel');
+      var bubble = document.getElementById('live-bubble');
+      var panel = document.getElementById('live-panel');
       if (pos === 'left') {
         bubble.style.left = '20px'; bubble.style.right = 'auto';
         panel.style.left = '20px'; panel.style.right = 'auto';
@@ -3225,7 +3143,6 @@
       document.getElementById('live-greeting').textContent = document.getElementById('cfg-greeting').value;
     }
   </script>
-
 </body>
 
 </html>
