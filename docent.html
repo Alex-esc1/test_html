@@ -141,6 +141,18 @@
       background: rgba(20, 23, 31, .05);
     }
 
+    .btn-ghost-on-dark {
+      border-color: var(--ink-line);
+      color: var(--paper);
+      background: transparent;
+    }
+
+    .btn-ghost-on-dark:hover {
+      border-color: var(--paper-70);
+      background: rgba(244, 242, 235, .08);
+      color: var(--paper);
+    }
+
     .btn-sm {
       padding: 9px 16px;
       font-size: 13.5px;
@@ -2446,9 +2458,6 @@
   </div>
 
   <!-- ============================================================ -->
-  <!-- APP VIEW -->
-  <!-- ============================================================ -->
-  <!-- ============================================================ -->
   <!-- ONBOARDING -->
   <!-- ============================================================ -->
   <div id="view-onboarding">
@@ -2498,7 +2507,7 @@
             <span id="ob-doc-name">FAQ.pdf added — indexing now</span>
           </div>
           <div class="ob-actions">
-            <button class="btn btn-ghost-dark" onclick="obNext(1)">← Back</button>
+            <button class="btn btn-ghost-on-dark" onclick="obNext(1)">← Back</button>
             <button class="btn btn-brass" onclick="obNext(3)">Continue →</button>
           </div>
         </div>
@@ -2514,7 +2523,7 @@
           <p class="ob-sub">It already knows what you uploaded. Try asking it something, or head straight to the
             dashboard — you can always come back and add more later.</p>
           <div class="ob-actions">
-            <button class="btn btn-ghost-dark" onclick="goApp('overview')">Go to dashboard</button>
+            <button class="btn btn-ghost-on-dark" onclick="goApp('overview')">Go to dashboard</button>
             <button class="btn btn-brass" onclick="goApp('chat')">Test it now →</button>
           </div>
         </div>
@@ -2547,6 +2556,9 @@
     </div>
   </div>
 
+  <!-- ============================================================ -->
+  <!-- APP VIEW -->
+  <!-- ============================================================ -->
   <div id="view-app">
 
     <aside class="app-sidebar">
