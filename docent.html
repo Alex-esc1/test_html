@@ -2157,7 +2157,8 @@
             <div class="cc-face front-face">
               <div class="cc-label"><span>007 — Shipping</span><span>Bramble Care</span></div>
               <div class="cc-doc">We ship to Canada and the US. Delivery takes <b>5–8 business days</b>. Orders over
-                <b>$75</b> ship free.</div>
+                <b>$75</b> ship free.
+              </div>
               <div class="cc-tag">● indexed 2 min ago</div>
             </div>
             <div class="cc-face back-face">
@@ -2505,648 +2506,654 @@
       <h2>Product demo</h2>
       <p class="sub">A 60-second walkthrough of Docent, start to finish.</p>
       <div class="video-frame" style="padding:0; overflow:hidden;">
-        <iframe src="https://www.youtube.com/embed/M8El1omo8UU" width="100%" height="100%" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/M8El1omo8UU" title="YouTube video player"
+          style="border:0;" referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
-  </div>
-  <div id="view-app">
-    <aside class="app-sidebar">
-      <div class="app-brand" onclick="goLanding()">
-        <div class="brand-mark">D</div>
-        <div class="brand-name">Docent</div>
-      </div>
-      <div class="app-workspace" onclick="showToast('Workspace switching isn\'t wired up in this prototype')">
-        <span>Bramble Co.</span><span class="chev">⌄</span>
-      </div>
-      <nav class="app-nav">
-        <button class="app-nav-item" data-appnav="overview" onclick="setAppView('overview')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M3 12l9-9 9 9" />
-            <path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10" />
-          </svg>
-          Overview
-        </button>
-        <button class="app-nav-item" data-appnav="chatbots" onclick="setAppView('chatbots')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <rect x="3" y="4" width="18" height="16" rx="2" />
-            <path d="M3 9h18" />
-          </svg>
-          Chatbots
-        </button>
-        <button class="app-nav-item" data-appnav="upload" onclick="setAppView('upload')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
-            <path d="M14 3v5h5" />
-          </svg>
-          Documents
-        </button>
-        <button class="app-nav-item" data-appnav="chat" onclick="setAppView('chat')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-.97L3 20l1.02-5.4A8.5 8.5 0 1 1 21 11.5Z" />
-          </svg>
-          Test chat
-        </button>
-        <button class="app-nav-item" data-appnav="embed" onclick="setAppView('embed')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="m8 6-6 6 6 6M16 6l6 6-6 6" />
-          </svg>
-          Embed widget
-        </button>
-        <button class="app-nav-item" data-appnav="analytics" onclick="setAppView('analytics')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M3 3v18h18" />
-            <path d="M18 17V9M13 17V5M8 17v-4" />
-          </svg>
-          Analytics
-        </button>
-      </nav>
-      <div class="app-plan-box">
-        <div class="lbl">Current plan</div>
-        <div class="name">Starter — Free</div>
-        <div class="quota-box">
-          <div class="quota-row"><span id="quota-label">48 / 50 pages</span><span>96%</span></div>
-          <div class="quota-track">
-            <div class="quota-fill" id="quota-fill" style="width:96%;"></div>
-          </div>
+    <div id="view-app">
+      <aside class="app-sidebar">
+        <div class="app-brand" onclick="goLanding()">
+          <div class="brand-mark">D</div>
+          <div class="brand-name">Docent</div>
         </div>
-        <button class="btn btn-brass btn-sm" style="width:100%; margin-top:12px;"
-          onclick="openPaywall('plan')">Upgrade</button>
-      </div>
-      <button class="back-to-site" onclick="goLanding()">← Back to site</button>
-    </aside>
-    <main class="app-main">
-      <div class="app-topbar">
-        <div class="crumb">Bramble Co. / <b id="app-title">Overview</b></div>
-        <div class="avatar">AK</div>
-      </div>
-      <div class="app-body">
-        <div class="app-subview" id="app-overview">
-          <div class="ov-greeting">Good evening, Alex.</div>
-          <div class="ov-sub">Bramble Care answered 312 questions this week without a single ticket.</div>
-          <div class="ov-grid">
-            <div class="ov-stat">
-              <div class="num">312</div>
-              <div class="lbl">Conversations this week</div>
-            </div>
-            <div class="ov-stat">
-              <div class="num">94%</div>
-              <div class="lbl">Answered without escalation</div>
-            </div>
-            <div class="ov-stat">
-              <div class="num">48</div>
-              <div class="lbl">Pages in the knowledge base</div>
-            </div>
-          </div>
-          <div class="ov-panels">
-            <div class="ov-panel">
-              <h5>Knowledge base<button onclick="setAppView('upload')">Manage →</button></h5>
-              <div class="doc-list" style="border:none; background:transparent; gap:10px;">
-                <div class="doc-row" style="border:1px solid var(--paper-line); border-radius:9px;">
-                  <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
-                      stroke-width="1.6">
-                      <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
-                    </svg></div>
-                  <div>
-                    <div class="doc-name">Shipping &amp; Returns.pdf</div>
-                    <div class="doc-meta">Indexed 2d ago</div>
-                  </div>
-                  <div class="chip ready">Indexed</div>
-                </div>
-                <div class="doc-row" style="border:1px solid var(--paper-line); border-radius:9px;">
-                  <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
-                      stroke-width="1.6">
-                      <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
-                    </svg></div>
-                  <div>
-                    <div class="doc-name">Warranty Policy.pdf</div>
-                    <div class="doc-meta">Indexed 2d ago</div>
-                  </div>
-                  <div class="chip ready">Indexed</div>
-                </div>
-              </div>
-            </div>
-            <div class="ov-panel">
-              <h5>Live preview<span
-                  style="color:var(--sage); font-family:var(--sans); text-transform:none; letter-spacing:0;">●
-                  Online</span></h5>
-              <div class="mini-chat" style="padding:0;">
-                <div class="mini-msg bot">Hi! Ask me anything about Bramble.</div>
-                <div class="mini-msg user">Can I cancel anytime?</div>
-                <div class="mini-msg bot">Yes — cancel from your account settings whenever you like.<div
-                    class="mini-cite">↳ cited: Warranty Policy.pdf</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="app-workspace" onclick="showToast('Workspace switching isn\'t wired up in this prototype')">
+          <span>Bramble Co.</span><span class="chev">⌄</span>
         </div>
-        <div class="app-subview" id="app-chatbots">
-          <p style="color:var(--ink-70); font-size:14px; margin:0;">One workspace, as many products as you're testing
-            this week.</p>
-          <div class="bot-grid">
-            <div class="bot-card">
-              <div class="bot-card-top">
-                <div class="bot-icon">B</div>
-                <div>
-                  <h4>Bramble Care</h4>
-                  <div class="sub">Public website widget</div>
-                </div>
-              </div>
-              <div class="bot-stats">
-                <div><b>48</b>pages indexed</div>
-                <div><b>312</b>chats this week</div>
-                <div><b>94%</b>resolved</div>
-              </div>
-            </div>
-            <div class="bot-card">
-              <div class="bot-card-top">
-                <div class="bot-icon">O</div>
-                <div>
-                  <h4>Onboarding Guide</h4>
-                  <div class="sub">In-app help</div>
-                </div>
-              </div>
-              <div class="bot-stats">
-                <div><b>21</b>pages indexed</div>
-                <div><b>88</b>chats this week</div>
-                <div><b>90%</b>resolved</div>
-              </div>
-            </div>
-            <div class="bot-card new" onclick="goOnboarding()">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-              New chatbot
-            </div>
-          </div>
-        </div>
-        <div class="app-subview" id="app-upload">
-          <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Documents</p>
-          <div class="dropzone">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="1.6"
-              style="margin:0 auto 14px;">
-              <path d="M12 3v12M7 10l5 5 5-5" />
-              <path d="M4 19h16" />
+        <nav class="app-nav">
+          <button class="app-nav-item" data-appnav="overview" onclick="setAppView('overview')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M3 12l9-9 9 9" />
+              <path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10" />
             </svg>
-            <h4>Drop files, or paste a URL</h4>
-            <p>PDF, DOCX, Notion export, or a link to your help center</p>
-            <button class="btn btn-brass btn-sm" onclick="addDoc()">Upload documents</button>
-          </div>
-          <div class="doc-list" id="doc-list">
-            <div class="doc-row">
-              <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
-                  stroke-width="1.6">
-                  <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
-                </svg></div>
-              <div>
-                <div class="doc-name">Shipping &amp; Returns.pdf</div>
-                <div class="doc-meta">7 pages · added 2d ago</div>
-              </div>
-              <div class="chip ready">Indexed</div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
-                  stroke-width="1.6">
-                  <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
-                </svg></div>
-              <div>
-                <div class="doc-name">Warranty Policy.pdf</div>
-                <div class="doc-meta">4 pages · added 2d ago</div>
-              </div>
-              <div class="chip ready">Indexed</div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
-                  stroke-width="1.6">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M8 12h8M12 8v8" />
-                </svg></div>
-              <div>
-                <div class="doc-name">help.bramble.co (URL)</div>
-                <div class="doc-meta">32 pages · added 5h ago</div>
-              </div>
-              <div class="chip ready">Indexed</div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
-                  stroke-width="1.6">
-                  <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
-                </svg></div>
-              <div>
-                <div class="doc-name">Size Guide.pdf</div>
-                <div class="doc-meta">2 pages · added just now</div>
-              </div>
-              <div class="chip processing">Processing</div>
+            Overview
+          </button>
+          <button class="app-nav-item" data-appnav="chatbots" onclick="setAppView('chatbots')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <path d="M3 9h18" />
+            </svg>
+            Chatbots
+          </button>
+          <button class="app-nav-item" data-appnav="upload" onclick="setAppView('upload')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
+              <path d="M14 3v5h5" />
+            </svg>
+            Documents
+          </button>
+          <button class="app-nav-item" data-appnav="chat" onclick="setAppView('chat')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-.97L3 20l1.02-5.4A8.5 8.5 0 1 1 21 11.5Z" />
+            </svg>
+            Test chat
+          </button>
+          <button class="app-nav-item" data-appnav="embed" onclick="setAppView('embed')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="m8 6-6 6 6 6M16 6l6 6-6 6" />
+            </svg>
+            Embed widget
+          </button>
+          <button class="app-nav-item" data-appnav="analytics" onclick="setAppView('analytics')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M3 3v18h18" />
+              <path d="M18 17V9M13 17V5M8 17v-4" />
+            </svg>
+            Analytics
+          </button>
+        </nav>
+        <div class="app-plan-box">
+          <div class="lbl">Current plan</div>
+          <div class="name">Starter — Free</div>
+          <div class="quota-box">
+            <div class="quota-row"><span id="quota-label">48 / 50 pages</span><span>96%</span></div>
+            <div class="quota-track">
+              <div class="quota-fill" id="quota-fill" style="width:96%;"></div>
             </div>
           </div>
+          <button class="btn btn-brass btn-sm" style="width:100%; margin-top:12px;"
+            onclick="openPaywall('plan')">Upgrade</button>
         </div>
-        <div class="app-subview" id="app-chat">
-          <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Test chat — this is exactly
-            what customers see</p>
-          <div class="chat-layout">
-            <div class="chat-window">
-              <div class="chat-window-head">
-                <div class="bot-switch">
-                  <button class="bot-switch-btn" onclick="toggleBotSwitch()">
-                    <div class="bot-icon" style="width:26px;height:26px;font-size:12px;" id="bot-switch-icon">B</div>
-                    <span id="bot-switch-name">Bramble Care</span>
-                    <span style="font-size:10px; color:var(--ink-70);">⌄</span>
-                  </button>
-                  <div class="bot-switch-menu" id="bot-switch-menu">
-                    <button onclick="switchBot('bramble')">
-                      <div class="bot-icon" style="width:20px;height:20px;font-size:10px;">B</div>Bramble Care
-                    </button>
-                    <button onclick="switchBot('onboarding')">
-                      <div class="bot-icon" style="width:20px;height:20px;font-size:10px;">O</div>Onboarding Guide
-                    </button>
+        <button class="back-to-site" onclick="goLanding()">← Back to site</button>
+      </aside>
+      <main class="app-main">
+        <div class="app-topbar">
+          <div class="crumb">Bramble Co. / <b id="app-title">Overview</b></div>
+          <div class="avatar">AK</div>
+        </div>
+        <div class="app-body">
+          <div class="app-subview" id="app-overview">
+            <div class="ov-greeting">Good evening, Alex.</div>
+            <div class="ov-sub">Bramble Care answered 312 questions this week without a single ticket.</div>
+            <div class="ov-grid">
+              <div class="ov-stat">
+                <div class="num">312</div>
+                <div class="lbl">Conversations this week</div>
+              </div>
+              <div class="ov-stat">
+                <div class="num">94%</div>
+                <div class="lbl">Answered without escalation</div>
+              </div>
+              <div class="ov-stat">
+                <div class="num">48</div>
+                <div class="lbl">Pages in the knowledge base</div>
+              </div>
+            </div>
+            <div class="ov-panels">
+              <div class="ov-panel">
+                <h5>Knowledge base<button onclick="setAppView('upload')">Manage →</button></h5>
+                <div class="doc-list" style="border:none; background:transparent; gap:10px;">
+                  <div class="doc-row" style="border:1px solid var(--paper-line); border-radius:9px;">
+                    <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
+                        stroke-width="1.6">
+                        <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
+                      </svg></div>
+                    <div>
+                      <div class="doc-name">Shipping &amp; Returns.pdf</div>
+                      <div class="doc-meta">Indexed 2d ago</div>
+                    </div>
+                    <div class="chip ready">Indexed</div>
+                  </div>
+                  <div class="doc-row" style="border:1px solid var(--paper-line); border-radius:9px;">
+                    <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
+                        stroke-width="1.6">
+                        <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
+                      </svg></div>
+                    <div>
+                      <div class="doc-name">Warranty Policy.pdf</div>
+                      <div class="doc-meta">Indexed 2d ago</div>
+                    </div>
+                    <div class="chip ready">Indexed</div>
                   </div>
                 </div>
               </div>
-              <div class="chat-scroll" id="chat-scroll">
-                <div class="msg bot">Hi! Ask me anything about your order or our products.</div>
-                <div class="msg user">Do you ship to Canada?</div>
-                <div class="msg bot">Yes — we ship to Canada and it usually takes 5 to 8 business days. Orders over $75
-                  CAD ship free.<div class="src">↳ Shipping &amp; Returns.pdf, p.2</div>
-                </div>
-                <div class="msg user">What if my order arrives damaged?</div>
-                <div class="msg bot">Send us a photo within 14 days of delivery and we'll send a free replacement — no
-                  need to return the damaged item.<div class="src">↳ Warranty Policy.pdf, p.1</div>
+              <div class="ov-panel">
+                <h5>Live preview<span
+                    style="color:var(--sage); font-family:var(--sans); text-transform:none; letter-spacing:0;">●
+                    Online</span></h5>
+                <div class="mini-chat" style="padding:0;">
+                  <div class="mini-msg bot">Hi! Ask me anything about Bramble.</div>
+                  <div class="mini-msg user">Can I cancel anytime?</div>
+                  <div class="mini-msg bot">Yes — cancel from your account settings whenever you like.<div
+                      class="mini-cite">↳ cited: Warranty Policy.pdf</div>
+                  </div>
                 </div>
               </div>
-              <div class="chat-input-row">
-                <input type="text" id="chat-input" placeholder="Type a message to test…"
-                  onkeydown="if(event.key==='Enter')sendMsg()">
-                <button class="btn btn-brass btn-sm" onclick="sendMsg()">Send</button>
-              </div>
-            </div>
-            <div class="side-panel">
-              <h5>Suggested by your docs</h5>
-              <div class="cited-doc"><b>What sizes do you carry?</b><span>from Size Guide.pdf</span></div>
-              <div class="cited-doc"><b>How do I track my order?</b><span>from help.bramble.co</span></div>
-              <div class="cited-doc"><b>Can I change my address?</b><span>gap — no doc covers this yet</span></div>
             </div>
           </div>
-        </div>
-        <div class="app-subview" id="app-embed">
-          <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Embed on your website</p>
-          <div class="embed-layout">
-            <div class="embed-config">
-              <div class="cfg-block">
-                <label>Greeting message</label>
-                <input type="text" value="Hi! Ask me anything about your order or our products." id="cfg-greeting"
-                  oninput="updatePreview()">
-              </div>
-              <div class="cfg-block">
-                <label>Accent color</label>
-                <div class="swatches">
-                  <div class="swatch active" style="background:#B8924A" onclick="setColor(this,'#B8924A')"></div>
-                  <div class="swatch" style="background:#14171F" onclick="setColor(this,'#14171F')"></div>
-                  <div class="swatch" style="background:#6E8C74" onclick="setColor(this,'#6E8C74')"></div>
-                  <div class="swatch" style="background:#B24C36" onclick="setColor(this,'#B24C36')"></div>
+          <div class="app-subview" id="app-chatbots">
+            <p style="color:var(--ink-70); font-size:14px; margin:0;">One workspace, as many products as you're testing
+              this week.</p>
+            <div class="bot-grid">
+              <div class="bot-card">
+                <div class="bot-card-top">
+                  <div class="bot-icon">B</div>
+                  <div>
+                    <h4>Bramble Care</h4>
+                    <div class="sub">Public website widget</div>
+                  </div>
+                </div>
+                <div class="bot-stats">
+                  <div><b>48</b>pages indexed</div>
+                  <div><b>312</b>chats this week</div>
+                  <div><b>94%</b>resolved</div>
                 </div>
               </div>
-              <div class="cfg-block">
-                <label>Position</label>
-                <div class="seg">
-                  <button class="active" onclick="setPos(this,'right')">Bottom right</button>
-                  <button onclick="setPos(this,'left')">Bottom left</button>
+              <div class="bot-card">
+                <div class="bot-card-top">
+                  <div class="bot-icon">O</div>
+                  <div>
+                    <h4>Onboarding Guide</h4>
+                    <div class="sub">In-app help</div>
+                  </div>
+                </div>
+                <div class="bot-stats">
+                  <div><b>21</b>pages indexed</div>
+                  <div><b>88</b>chats this week</div>
+                  <div><b>90%</b>resolved</div>
                 </div>
               </div>
-              <div class="cfg-block">
-                <label>Embed code</label>
-                <div class="embed-code" id="embed-code-app"
-                  style="white-space:normal; word-break:break-all; font-size:11.5px; color:#14171F;">&lt;script
-                  src="https://cdn.docent.chat/widget.js" data-bot="bramble-care"
-                  data-color="#B8924A"&gt;&lt;/script&gt;</div>
-                <button class="btn btn-ghost-light btn-sm" style="margin-top:12px; width:100%;"
-                  onclick="showToast('Embed code copied to clipboard')">Copy code</button>
-              </div>
-            </div>
-            <div class="live-preview">
-              <div class="fake-browser-bar"><span></span><span></span><span></span></div>
-              <div class="widget-panel" id="live-panel" style="right:20px; left:auto; bottom:80px; background:#14171F;">
-                <div class="who" id="live-who">Bramble Care</div>
-                <span id="live-greeting">Hi! Ask me anything about your order or our products.</span>
-              </div>
-              <div class="widget-bubble" id="live-bubble"
-                style="right:20px; left:auto; bottom:20px; background:#B8924A;">
-                <svg id="live-bubble-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14171F" stroke-width="2">
-                  <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-.97L3 20l1.02-5.4A8.5 8.5 0 1 1 21 11.5Z" />
+              <div class="bot-card new" onclick="goOnboarding()">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 5v14M5 12h14" />
                 </svg>
+                New chatbot
               </div>
             </div>
           </div>
-        </div>
-        <div class="app-subview" id="app-analytics">
-          <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Last 30 days</p>
-          <div class="ov-grid">
-            <div class="ov-stat">
-              <div class="num">1,248</div>
-              <div class="lbl">Conversations this month</div>
+          <div class="app-subview" id="app-upload">
+            <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Documents</p>
+            <div class="dropzone">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="1.6"
+                style="margin:0 auto 14px;">
+                <path d="M12 3v12M7 10l5 5 5-5" />
+                <path d="M4 19h16" />
+              </svg>
+              <h4>Drop files, or paste a URL</h4>
+              <p>PDF, DOCX, Notion export, or a link to your help center</p>
+              <button class="btn btn-brass btn-sm" onclick="addDoc()">Upload documents</button>
             </div>
-            <div class="ov-stat">
-              <div class="num">94%</div>
-              <div class="lbl">Questions answered successfully</div>
-            </div>
-            <div class="ov-stat">
-              <div class="num">18s</div>
-              <div class="lbl">Average time to first answer</div>
+            <div class="doc-list" id="doc-list">
+              <div class="doc-row">
+                <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
+                    stroke-width="1.6">
+                    <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
+                  </svg></div>
+                <div>
+                  <div class="doc-name">Shipping &amp; Returns.pdf</div>
+                  <div class="doc-meta">7 pages · added 2d ago</div>
+                </div>
+                <div class="chip ready">Indexed</div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
+                    stroke-width="1.6">
+                    <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
+                  </svg></div>
+                <div>
+                  <div class="doc-name">Warranty Policy.pdf</div>
+                  <div class="doc-meta">4 pages · added 2d ago</div>
+                </div>
+                <div class="chip ready">Indexed</div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
+                    stroke-width="1.6">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M8 12h8M12 8v8" />
+                  </svg></div>
+                <div>
+                  <div class="doc-name">help.bramble.co (URL)</div>
+                  <div class="doc-meta">32 pages · added 5h ago</div>
+                </div>
+                <div class="chip ready">Indexed</div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F"
+                    stroke-width="1.6">
+                    <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
+                  </svg></div>
+                <div>
+                  <div class="doc-name">Size Guide.pdf</div>
+                  <div class="doc-meta">2 pages · added just now</div>
+                </div>
+                <div class="chip processing">Processing</div>
+              </div>
             </div>
           </div>
-          <div class="an-topq">
-            <h5
-              style="margin:0 0 14px; font-size:12px; text-transform:uppercase; letter-spacing:.05em; font-family:var(--mono); color:var(--ink-70);">
-              Top questions</h5>
-            <div class="an-topq-row"><span class="rank">01</span><span class="qtext">Do you ship to Canada?</span><span
-                class="qcount">184</span></div>
-            <div class="an-topq-row"><span class="rank">02</span><span class="qtext">What if my order arrives
-                damaged?</span><span class="qcount">143</span></div>
-            <div class="an-topq-row"><span class="rank">03</span><span class="qtext">Can I change my shipping
-                address?</span><span class="qcount">97</span></div>
-            <div class="an-topq-row"><span class="rank">04</span><span class="qtext">What sizes do you
-                carry?</span><span class="qcount">61</span></div>
+          <div class="app-subview" id="app-chat">
+            <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Test chat — this is exactly
+              what customers see</p>
+            <div class="chat-layout">
+              <div class="chat-window">
+                <div class="chat-window-head">
+                  <div class="bot-switch">
+                    <button class="bot-switch-btn" onclick="toggleBotSwitch()">
+                      <div class="bot-icon" style="width:26px;height:26px;font-size:12px;" id="bot-switch-icon">B</div>
+                      <span id="bot-switch-name">Bramble Care</span>
+                      <span style="font-size:10px; color:var(--ink-70);">⌄</span>
+                    </button>
+                    <div class="bot-switch-menu" id="bot-switch-menu">
+                      <button onclick="switchBot('bramble')">
+                        <div class="bot-icon" style="width:20px;height:20px;font-size:10px;">B</div>Bramble Care
+                      </button>
+                      <button onclick="switchBot('onboarding')">
+                        <div class="bot-icon" style="width:20px;height:20px;font-size:10px;">O</div>Onboarding Guide
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-scroll" id="chat-scroll">
+                  <div class="msg bot">Hi! Ask me anything about your order or our products.</div>
+                  <div class="msg user">Do you ship to Canada?</div>
+                  <div class="msg bot">Yes — we ship to Canada and it usually takes 5 to 8 business days. Orders over
+                    $75
+                    CAD ship free.<div class="src">↳ Shipping &amp; Returns.pdf, p.2</div>
+                  </div>
+                  <div class="msg user">What if my order arrives damaged?</div>
+                  <div class="msg bot">Send us a photo within 14 days of delivery and we'll send a free replacement — no
+                    need to return the damaged item.<div class="src">↳ Warranty Policy.pdf, p.1</div>
+                  </div>
+                </div>
+                <div class="chat-input-row">
+                  <input type="text" id="chat-input" placeholder="Type a message to test…"
+                    onkeydown="if(event.key==='Enter')sendMsg()">
+                  <button class="btn btn-brass btn-sm" onclick="sendMsg()">Send</button>
+                </div>
+              </div>
+              <div class="side-panel">
+                <h5>Suggested by your docs</h5>
+                <div class="cited-doc"><b>What sizes do you carry?</b><span>from Size Guide.pdf</span></div>
+                <div class="cited-doc"><b>How do I track my order?</b><span>from help.bramble.co</span></div>
+                <div class="cited-doc"><b>Can I change my address?</b><span>gap — no doc covers this yet</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="app-subview" id="app-embed">
+            <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Embed on your website</p>
+            <div class="embed-layout">
+              <div class="embed-config">
+                <div class="cfg-block">
+                  <label>Greeting message</label>
+                  <input type="text" value="Hi! Ask me anything about your order or our products." id="cfg-greeting"
+                    oninput="updatePreview()">
+                </div>
+                <div class="cfg-block">
+                  <label>Accent color</label>
+                  <div class="swatches">
+                    <div class="swatch active" style="background:#B8924A" onclick="setColor(this,'#B8924A')"></div>
+                    <div class="swatch" style="background:#14171F" onclick="setColor(this,'#14171F')"></div>
+                    <div class="swatch" style="background:#6E8C74" onclick="setColor(this,'#6E8C74')"></div>
+                    <div class="swatch" style="background:#B24C36" onclick="setColor(this,'#B24C36')"></div>
+                  </div>
+                </div>
+                <div class="cfg-block">
+                  <label>Position</label>
+                  <div class="seg">
+                    <button class="active" onclick="setPos(this,'right')">Bottom right</button>
+                    <button onclick="setPos(this,'left')">Bottom left</button>
+                  </div>
+                </div>
+                <div class="cfg-block">
+                  <label>Embed code</label>
+                  <div class="embed-code" id="embed-code-app"
+                    style="white-space:normal; word-break:break-all; font-size:11.5px; color:#14171F;">&lt;script
+                    src="https://cdn.docent.chat/widget.js" data-bot="bramble-care"
+                    data-color="#B8924A"&gt;&lt;/script&gt;</div>
+                  <button class="btn btn-ghost-light btn-sm" style="margin-top:12px; width:100%;"
+                    onclick="showToast('Embed code copied to clipboard')">Copy code</button>
+                </div>
+              </div>
+              <div class="live-preview">
+                <div class="fake-browser-bar"><span></span><span></span><span></span></div>
+                <div class="widget-panel" id="live-panel"
+                  style="right:20px; left:auto; bottom:80px; background:#14171F;">
+                  <div class="who" id="live-who">Bramble Care</div>
+                  <span id="live-greeting">Hi! Ask me anything about your order or our products.</span>
+                </div>
+                <div class="widget-bubble" id="live-bubble"
+                  style="right:20px; left:auto; bottom:20px; background:#B8924A;">
+                  <svg id="live-bubble-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14171F"
+                    stroke-width="2">
+                    <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-.97L3 20l1.02-5.4A8.5 8.5 0 1 1 21 11.5Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app-subview" id="app-analytics">
+            <p style="color:var(--ink-70); font-size:14px; margin:0 0 4px;">Bramble Care · Last 30 days</p>
+            <div class="ov-grid">
+              <div class="ov-stat">
+                <div class="num">1,248</div>
+                <div class="lbl">Conversations this month</div>
+              </div>
+              <div class="ov-stat">
+                <div class="num">94%</div>
+                <div class="lbl">Questions answered successfully</div>
+              </div>
+              <div class="ov-stat">
+                <div class="num">18s</div>
+                <div class="lbl">Average time to first answer</div>
+              </div>
+            </div>
+            <div class="an-topq">
+              <h5
+                style="margin:0 0 14px; font-size:12px; text-transform:uppercase; letter-spacing:.05em; font-family:var(--mono); color:var(--ink-70);">
+                Top questions</h5>
+              <div class="an-topq-row"><span class="rank">01</span><span class="qtext">Do you ship to
+                  Canada?</span><span class="qcount">184</span></div>
+              <div class="an-topq-row"><span class="rank">02</span><span class="qtext">What if my order arrives
+                  damaged?</span><span class="qcount">143</span></div>
+              <div class="an-topq-row"><span class="rank">03</span><span class="qtext">Can I change my shipping
+                  address?</span><span class="qcount">97</span></div>
+              <div class="an-topq-row"><span class="rank">04</span><span class="qtext">What sizes do you
+                  carry?</span><span class="qcount">61</span></div>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-  </div>
-  <div class="pw-overlay" id="paywall">
-    <div class="pw-modal">
-      <button class="pw-close" onclick="closePaywall()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 6l12 12M18 6 6 18" />
-        </svg>
-      </button>
-      <div class="pw-head">
-        <span class="eyebrow">Upgrade</span>
-        <h2 id="pw-title">Analytics is part of the Growth plan</h2>
-        <p id="pw-sub">You're on Starter, which covers one chatbot and the essentials. Growth adds the reporting most
-          teams ask for in week two.</p>
-      </div>
-      <div class="plans">
-        <div class="plan">
-          <div class="plan-name">Starter</div>
-          <div class="plan-price">$0<span> / forever</span></div>
-          <div class="plan-sub">Your current plan.</div>
-          <ul class="plan-feats">
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg><b>1</b>&nbsp;chatbot</li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>Up to <b>50</b> pages</li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>Docent branding shown</li>
-          </ul>
-          <button class="btn btn-ghost-dark" disabled style="opacity:.5;">Current plan</button>
+      </main>
+    </div>
+    <div class="pw-overlay" id="paywall">
+      <div class="pw-modal">
+        <button class="pw-close" onclick="closePaywall()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+        <div class="pw-head">
+          <span class="eyebrow">Upgrade</span>
+          <h2 id="pw-title">Analytics is part of the Growth plan</h2>
+          <p id="pw-sub">You're on Starter, which covers one chatbot and the essentials. Growth adds the reporting most
+            teams ask for in week two.</p>
         </div>
-        <div class="plan featured">
-          <div class="plan-badge">Recommended</div>
-          <div class="plan-name">Growth</div>
-          <div class="plan-price">$39<span> / month</span></div>
-          <div class="plan-sub">Everything in Starter, plus:</div>
-          <ul class="plan-feats">
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg><b>5</b>&nbsp;chatbots</li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>Up to <b>2,000</b> pages</li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>Remove branding + custom domain</li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg><b>Conversation analytics</b></li>
-          </ul>
-          <button class="btn btn-brass" style="width:100%;"
-            onclick="this.textContent='Upgraded ✓'; this.style.opacity=.7; closePaywall(); showToast('Upgraded to Growth — limits raised to 2,000 pages');">Upgrade
-            to Growth</button>
-        </div>
-        <div class="plan">
-          <div class="plan-name">Scale</div>
-          <div class="plan-price">$129<span> / month</span></div>
-          <div class="plan-sub">For multi-team workspaces.</div>
-          <ul class="plan-feats">
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg><b>Unlimited</b> chatbots</li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>Team seats + SSO</li>
-            <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>API access</li>
-          </ul>
-          <button class="btn btn-ghost-dark" style="width:100%;"
-            onclick="this.textContent='Thanks — we\'ll be in touch'">Talk to us</button>
+        <div class="plans">
+          <div class="plan">
+            <div class="plan-name">Starter</div>
+            <div class="plan-price">$0<span> / forever</span></div>
+            <div class="plan-sub">Your current plan.</div>
+            <ul class="plan-feats">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg><b>1</b>&nbsp;chatbot</li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Up to <b>50</b> pages</li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Docent branding shown</li>
+            </ul>
+            <button class="btn btn-ghost-dark" disabled style="opacity:.5;">Current plan</button>
+          </div>
+          <div class="plan featured">
+            <div class="plan-badge">Recommended</div>
+            <div class="plan-name">Growth</div>
+            <div class="plan-price">$39<span> / month</span></div>
+            <div class="plan-sub">Everything in Starter, plus:</div>
+            <ul class="plan-feats">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg><b>5</b>&nbsp;chatbots</li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Up to <b>2,000</b> pages</li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Remove branding + custom domain</li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg><b>Conversation analytics</b></li>
+            </ul>
+            <button class="btn btn-brass" style="width:100%;"
+              onclick="this.textContent='Upgraded ✓'; this.style.opacity=.7; closePaywall(); showToast('Upgraded to Growth — limits raised to 2,000 pages');">Upgrade
+              to Growth</button>
+          </div>
+          <div class="plan">
+            <div class="plan-name">Scale</div>
+            <div class="plan-price">$129<span> / month</span></div>
+            <div class="plan-sub">For multi-team workspaces.</div>
+            <ul class="plan-feats">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg><b>Unlimited</b> chatbots</li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Team seats + SSO</li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#B8924A" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>API access</li>
+            </ul>
+            <button class="btn btn-ghost-dark" style="width:100%;"
+              onclick="this.textContent='Thanks — we\'ll be in touch'">Talk to us</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="auth-overlay" id="loginModal">
-    <div class="auth-modal">
-      <button class="auth-close" onclick="closeLogin()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 6l12 12M18 6 6 18" />
-        </svg>
-      </button>
-      <h2>Welcome back</h2>
-      <p class="sub">Sign in to your Docent workspace.</p>
-      <form onsubmit="return submitLogin(event)">
-        <label>Email</label>
-        <input type="email" required placeholder="you@company.com" autocomplete="email">
-        <label>Password</label>
-        <input type="password" required minlength="4" placeholder="••••••••" autocomplete="current-password">
-        <button type="submit" class="btn btn-brass" style="width:100%;">Sign in</button>
-      </form>
-      <p class="auth-hint">Demo prototype — any email and password (4+ characters) works.</p>
-      <button class="auth-switch" onclick="closeLogin(); goOnboarding();">No account? Start free →</button>
+    <div class="auth-overlay" id="loginModal">
+      <div class="auth-modal">
+        <button class="auth-close" onclick="closeLogin()">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+        <h2>Welcome back</h2>
+        <p class="sub">Sign in to your Docent workspace.</p>
+        <form onsubmit="return submitLogin(event)">
+          <label>Email</label>
+          <input type="email" required placeholder="you@company.com" autocomplete="email">
+          <label>Password</label>
+          <input type="password" required minlength="4" placeholder="••••••••" autocomplete="current-password">
+          <button type="submit" class="btn btn-brass" style="width:100%;">Sign in</button>
+        </form>
+        <p class="auth-hint">Demo prototype — any email and password (4+ characters) works.</p>
+        <button class="auth-switch" onclick="closeLogin(); goOnboarding();">No account? Start free →</button>
+      </div>
     </div>
-  </div>
-  <div id="toast"><span class="tdot"></span><span id="toast-text"></span></div>
-  <script>
-    function goApp(view) {
-      document.documentElement.setAttribute('data-route', 'app');
-      setAppView(view || 'overview');
-      window.scrollTo(0, 0);
-    }
-    function goLanding() {
-      document.documentElement.setAttribute('data-route', 'landing');
-      window.scrollTo(0, 0);
-    }
-    function goOnboarding() {
-      document.documentElement.setAttribute('data-route', 'onboarding');
-      obNext(1);
-      window.scrollTo(0, 0);
-    }
-    function obNext(step) {
-      document.querySelectorAll('.ob-step').forEach(function (el) { el.classList.remove('active'); });
-      document.getElementById('ob-step-' + step).classList.add('active');
-      document.querySelectorAll('[data-obdot]').forEach(function (el) {
-        el.classList.toggle('done', Number(el.dataset.obdot) <= step);
-      });
-      if (step === 3) {
-        var name = document.getElementById('ob-bot-name').value.trim() || 'Your chatbot';
-        document.getElementById('ob-done-title').textContent = name + ' is ready to test.';
+    <div id="toast"><span class="tdot"></span><span id="toast-text"></span></div>
+    <script>
+      function goApp(view) {
+        document.documentElement.setAttribute('data-route', 'app');
+        setAppView(view || 'overview');
+        window.scrollTo(0, 0);
       }
-    }
-    function obUpload() {
-      document.getElementById('ob-doc-added').classList.add('show');
-      showToast('FAQ.pdf uploaded and indexing');
-    }
-    function openVideo() { document.getElementById('videoModal').classList.add('open'); }
-    function closeVideo() { document.getElementById('videoModal').classList.remove('open'); }
-    var titles = { overview: 'Overview', chatbots: 'Chatbots', upload: 'Documents', chat: 'Test chat', embed: 'Embed widget', analytics: 'Analytics' };
-    function setAppView(v) {
-      document.documentElement.setAttribute('data-app-view', v);
-      document.querySelectorAll('.app-nav-item').forEach(function (el) {
-        el.classList.toggle('active', el.dataset.appnav === v);
-      });
-      document.getElementById('app-title').textContent = titles[v] || '';
-    }
-    function openLogin() { document.getElementById('loginModal').classList.add('open'); }
-    function closeLogin() { document.getElementById('loginModal').classList.remove('open'); }
-    function submitLogin(e) {
-      e.preventDefault();
-      closeLogin();
-      goApp('overview');
-      showToast('Welcome back — signed in as Alex');
-      return false;
-    }
-    var toastTimer;
-    function showToast(text) {
-      var t = document.getElementById('toast');
-      document.getElementById('toast-text').textContent = text;
-      t.classList.add('show');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2600);
-    }
-    var botSeeds = {
-      bramble: {
-        name: 'Bramble Care', icon: 'B',
-        messages: [
-          { role: 'bot', text: 'Hi! Ask me anything about your order or our products.' },
-          { role: 'user', text: 'Do you ship to Canada?' },
-          { role: 'bot', text: 'Yes — we ship to Canada and it usually takes 5 to 8 business days. Orders over $75 CAD ship free.', src: 'Shipping &amp; Returns.pdf, p.2' },
-          { role: 'user', text: 'What if my order arrives damaged?' },
-          { role: 'bot', text: "Send us a photo within 14 days of delivery and we'll send a free replacement — no need to return the damaged item.", src: 'Warranty Policy.pdf, p.1' }
-        ]
-      },
-      onboarding: {
-        name: 'Onboarding Guide', icon: 'O',
-        messages: [
-          { role: 'bot', text: 'Hi! I can walk you through setting up your account.' },
-          { role: 'user', text: 'How do I invite my team?' },
-          { role: 'bot', text: 'Go to Settings → Team, then enter their email addresses. They\'ll get an invite link that expires in 7 days.', src: 'Team Setup Guide.pdf, p.1' },
-          { role: 'user', text: 'Can I change my plan later?' },
-          { role: 'bot', text: 'Yes, anytime from Settings → Billing. Changes take effect on your next billing cycle.', src: 'Billing FAQ.pdf, p.3' }
-        ]
+      function goLanding() {
+        document.documentElement.setAttribute('data-route', 'landing');
+        window.scrollTo(0, 0);
       }
-    };
-    function toggleBotSwitch() { document.getElementById('bot-switch-menu').classList.toggle('open'); }
-    function switchBot(key) {
-      var bot = botSeeds[key];
-      document.getElementById('bot-switch-icon').textContent = bot.icon;
-      document.getElementById('bot-switch-name').textContent = bot.name;
-      document.getElementById('bot-switch-menu').classList.remove('open');
-      var scroll = document.getElementById('chat-scroll');
-      scroll.innerHTML = '';
-      bot.messages.forEach(function (m) {
-        var div = document.createElement('div');
-        div.className = 'msg ' + m.role;
-        div.innerHTML = m.text + (m.src ? '<div class="src">↳ ' + m.src + '</div>' : '');
-        scroll.appendChild(div);
-      });
-      showToast('Switched to ' + bot.name);
-    }
-    document.addEventListener('click', function (e) {
-      var menu = document.getElementById('bot-switch-menu');
-      if (menu && !e.target.closest('.bot-switch')) menu.classList.remove('open');
-    });
-    function openPaywall(context) {
-      if (context === 'analytics') {
-        document.getElementById('pw-title').textContent = 'Analytics is part of the Growth plan';
-        document.getElementById('pw-sub').textContent = "You're on Starter, which covers one chatbot and the essentials. Growth adds the reporting most teams ask for in week two.";
-      } else {
-        document.getElementById('pw-title').textContent = 'Upgrade your plan';
-        document.getElementById('pw-sub').textContent = "Pick the plan that matches where Bramble Care is headed.";
+      function goOnboarding() {
+        document.documentElement.setAttribute('data-route', 'onboarding');
+        obNext(1);
+        window.scrollTo(0, 0);
       }
-      document.getElementById('paywall').classList.add('open');
-    }
-    function closePaywall() { document.getElementById('paywall').classList.remove('open'); }
-    var docCount = 48;
-    var docLimit = 50;
-    function addDoc() {
-      docCount++;
-      var row = document.createElement('div');
-      row.className = 'doc-row';
-      row.innerHTML = '<div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F" stroke-width="1.6"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/></svg></div><div><div class="doc-name">New Document.pdf</div><div class="doc-meta">Training on your content…</div></div><div class="chip processing">Processing</div>';
-      document.getElementById('doc-list').appendChild(row);
-      showToast('Uploading New Document.pdf…');
-      updateQuota();
-      setTimeout(function () {
-        row.querySelector('.doc-meta').textContent = 'Indexed just now';
-        row.querySelector('.chip').className = 'chip ready';
-        row.querySelector('.chip').textContent = 'Indexed';
-        showToast('New Document.pdf is indexed and live');
-      }, 1400);
-      if (docCount > docLimit) { setTimeout(function () { openPaywall('docs'); }, 1600); }
-    }
-    function updateQuota() {
-      var pct = Math.min(100, Math.round((docCount / docLimit) * 100));
-      document.getElementById('quota-label').textContent = docCount + ' / ' + docLimit + ' pages';
-      document.getElementById('quota-fill').style.width = pct + '%';
-      document.querySelector('.quota-row span:last-child').textContent = pct + '%';
-    }
-    function sendMsg() {
-      var input = document.getElementById('chat-input');
-      var text = input.value.trim();
-      if (!text) return;
-      var scroll = document.getElementById('chat-scroll');
-      var u = document.createElement('div'); u.className = 'msg user'; u.textContent = text;
-      scroll.appendChild(u);
-      input.value = '';
-      scroll.scrollTop = scroll.scrollHeight;
-      var greetings = ['hi', 'hello', 'hey', 'привет', 'здравствуй', 'здравствуйте', 'ку', 'йо', 'yo'];
-      var isGreeting = greetings.indexOf(text.toLowerCase().replace(/[!.,?]/g, '').trim()) !== -1;
-      setTimeout(function () {
-        var b = document.createElement('div'); b.className = 'msg bot';
-        if (isGreeting) {
-          b.textContent = "Hi there! What can I help you find in the docs?";
-        } else {
-          b.innerHTML = "Good question — here's what our docs say, based on the closest match I could find.<div class=\"src\">↳ help.bramble.co</div>";
+      function obNext(step) {
+        document.querySelectorAll('.ob-step').forEach(function (el) { el.classList.remove('active'); });
+        document.getElementById('ob-step-' + step).classList.add('active');
+        document.querySelectorAll('[data-obdot]').forEach(function (el) {
+          el.classList.toggle('done', Number(el.dataset.obdot) <= step);
+        });
+        if (step === 3) {
+          var name = document.getElementById('ob-bot-name').value.trim() || 'Your chatbot';
+          document.getElementById('ob-done-title').textContent = name + ' is ready to test.';
         }
-        scroll.appendChild(b);
-        scroll.scrollTop = scroll.scrollHeight;
-      }, 500);
-    }
-    function setColor(el, color) {
-      document.querySelectorAll('.swatch').forEach(function (s) { s.classList.remove('active'); });
-      el.classList.add('active');
-      document.getElementById('live-bubble').style.background = color;
-      var r = parseInt(color.substr(1, 2), 16), g = parseInt(color.substr(3, 2), 16), b = parseInt(color.substr(5, 2), 16);
-      var brightness = (r * 299 + g * 587 + b * 114) / 1000;
-      document.getElementById('live-bubble-icon').setAttribute('stroke', brightness > 150 ? '#14171F' : '#F4F1EA');
-      document.getElementById('embed-code-app').textContent = '<script src="https://cdn.docent.chat/widget.js" data-bot="bramble-care" data-color="' + color + '"></' + 'script>';
-    }
-    function setPos(btn, pos) {
-      document.querySelectorAll('.seg button').forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var bubble = document.getElementById('live-bubble');
-      var panel = document.getElementById('live-panel');
-      if (pos === 'left') {
-        bubble.style.left = '20px'; bubble.style.right = 'auto';
-        panel.style.left = '20px'; panel.style.right = 'auto';
-      } else {
-        bubble.style.right = '20px'; bubble.style.left = 'auto';
-        panel.style.right = '20px'; panel.style.left = 'auto';
       }
-    }
-    function updatePreview() {
-      document.getElementById('live-greeting').textContent = document.getElementById('cfg-greeting').value;
-    }
-  </script>
+      function obUpload() {
+        document.getElementById('ob-doc-added').classList.add('show');
+        showToast('FAQ.pdf uploaded and indexing');
+      }
+      function openVideo() { document.getElementById('videoModal').classList.add('open'); }
+      function closeVideo() { document.getElementById('videoModal').classList.remove('open'); }
+      var titles = { overview: 'Overview', chatbots: 'Chatbots', upload: 'Documents', chat: 'Test chat', embed: 'Embed widget', analytics: 'Analytics' };
+      function setAppView(v) {
+        document.documentElement.setAttribute('data-app-view', v);
+        document.querySelectorAll('.app-nav-item').forEach(function (el) {
+          el.classList.toggle('active', el.dataset.appnav === v);
+        });
+        document.getElementById('app-title').textContent = titles[v] || '';
+      }
+      function openLogin() { document.getElementById('loginModal').classList.add('open'); }
+      function closeLogin() { document.getElementById('loginModal').classList.remove('open'); }
+      function submitLogin(e) {
+        e.preventDefault();
+        closeLogin();
+        goApp('overview');
+        showToast('Welcome back — signed in as Alex');
+        return false;
+      }
+      var toastTimer;
+      function showToast(text) {
+        var t = document.getElementById('toast');
+        document.getElementById('toast-text').textContent = text;
+        t.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2600);
+      }
+      var botSeeds = {
+        bramble: {
+          name: 'Bramble Care', icon: 'B',
+          messages: [
+            { role: 'bot', text: 'Hi! Ask me anything about your order or our products.' },
+            { role: 'user', text: 'Do you ship to Canada?' },
+            { role: 'bot', text: 'Yes — we ship to Canada and it usually takes 5 to 8 business days. Orders over $75 CAD ship free.', src: 'Shipping &amp; Returns.pdf, p.2' },
+            { role: 'user', text: 'What if my order arrives damaged?' },
+            { role: 'bot', text: "Send us a photo within 14 days of delivery and we'll send a free replacement — no need to return the damaged item.", src: 'Warranty Policy.pdf, p.1' }
+          ]
+        },
+        onboarding: {
+          name: 'Onboarding Guide', icon: 'O',
+          messages: [
+            { role: 'bot', text: 'Hi! I can walk you through setting up your account.' },
+            { role: 'user', text: 'How do I invite my team?' },
+            { role: 'bot', text: 'Go to Settings → Team, then enter their email addresses. They\'ll get an invite link that expires in 7 days.', src: 'Team Setup Guide.pdf, p.1' },
+            { role: 'user', text: 'Can I change my plan later?' },
+            { role: 'bot', text: 'Yes, anytime from Settings → Billing. Changes take effect on your next billing cycle.', src: 'Billing FAQ.pdf, p.3' }
+          ]
+        }
+      };
+      function toggleBotSwitch() { document.getElementById('bot-switch-menu').classList.toggle('open'); }
+      function switchBot(key) {
+        var bot = botSeeds[key];
+        document.getElementById('bot-switch-icon').textContent = bot.icon;
+        document.getElementById('bot-switch-name').textContent = bot.name;
+        document.getElementById('bot-switch-menu').classList.remove('open');
+        var scroll = document.getElementById('chat-scroll');
+        scroll.innerHTML = '';
+        bot.messages.forEach(function (m) {
+          var div = document.createElement('div');
+          div.className = 'msg ' + m.role;
+          div.innerHTML = m.text + (m.src ? '<div class="src">↳ ' + m.src + '</div>' : '');
+          scroll.appendChild(div);
+        });
+        showToast('Switched to ' + bot.name);
+      }
+      document.addEventListener('click', function (e) {
+        var menu = document.getElementById('bot-switch-menu');
+        if (menu && !e.target.closest('.bot-switch')) menu.classList.remove('open');
+      });
+      function openPaywall(context) {
+        if (context === 'analytics') {
+          document.getElementById('pw-title').textContent = 'Analytics is part of the Growth plan';
+          document.getElementById('pw-sub').textContent = "You're on Starter, which covers one chatbot and the essentials. Growth adds the reporting most teams ask for in week two.";
+        } else {
+          document.getElementById('pw-title').textContent = 'Upgrade your plan';
+          document.getElementById('pw-sub').textContent = "Pick the plan that matches where Bramble Care is headed.";
+        }
+        document.getElementById('paywall').classList.add('open');
+      }
+      function closePaywall() { document.getElementById('paywall').classList.remove('open'); }
+      var docCount = 48;
+      var docLimit = 50;
+      function addDoc() {
+        docCount++;
+        var row = document.createElement('div');
+        row.className = 'doc-row';
+        row.innerHTML = '<div class="doc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14171F" stroke-width="1.6"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/></svg></div><div><div class="doc-name">New Document.pdf</div><div class="doc-meta">Training on your content…</div></div><div class="chip processing">Processing</div>';
+        document.getElementById('doc-list').appendChild(row);
+        showToast('Uploading New Document.pdf…');
+        updateQuota();
+        setTimeout(function () {
+          row.querySelector('.doc-meta').textContent = 'Indexed just now';
+          row.querySelector('.chip').className = 'chip ready';
+          row.querySelector('.chip').textContent = 'Indexed';
+          showToast('New Document.pdf is indexed and live');
+        }, 1400);
+        if (docCount > docLimit) { setTimeout(function () { openPaywall('docs'); }, 1600); }
+      }
+      function updateQuota() {
+        var pct = Math.min(100, Math.round((docCount / docLimit) * 100));
+        document.getElementById('quota-label').textContent = docCount + ' / ' + docLimit + ' pages';
+        document.getElementById('quota-fill').style.width = pct + '%';
+        document.querySelector('.quota-row span:last-child').textContent = pct + '%';
+      }
+      function sendMsg() {
+        var input = document.getElementById('chat-input');
+        var text = input.value.trim();
+        if (!text) return;
+        var scroll = document.getElementById('chat-scroll');
+        var u = document.createElement('div'); u.className = 'msg user'; u.textContent = text;
+        scroll.appendChild(u);
+        input.value = '';
+        scroll.scrollTop = scroll.scrollHeight;
+        var greetings = ['hi', 'hello', 'hey', 'привет', 'здравствуй', 'здравствуйте', 'ку', 'йо', 'yo'];
+        var isGreeting = greetings.indexOf(text.toLowerCase().replace(/[!.,?]/g, '').trim()) !== -1;
+        setTimeout(function () {
+          var b = document.createElement('div'); b.className = 'msg bot';
+          if (isGreeting) {
+            b.textContent = "Hi there! What can I help you find in the docs?";
+          } else {
+            b.innerHTML = "Good question — here's what our docs say, based on the closest match I could find.<div class=\"src\">↳ help.bramble.co</div>";
+          }
+          scroll.appendChild(b);
+          scroll.scrollTop = scroll.scrollHeight;
+        }, 500);
+      }
+      function setColor(el, color) {
+        document.querySelectorAll('.swatch').forEach(function (s) { s.classList.remove('active'); });
+        el.classList.add('active');
+        document.getElementById('live-bubble').style.background = color;
+        var r = parseInt(color.substr(1, 2), 16), g = parseInt(color.substr(3, 2), 16), b = parseInt(color.substr(5, 2), 16);
+        var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+        document.getElementById('live-bubble-icon').setAttribute('stroke', brightness > 150 ? '#14171F' : '#F4F1EA');
+        document.getElementById('embed-code-app').textContent = '<script src="https://cdn.docent.chat/widget.js" data-bot="bramble-care" data-color="' + color + '"></' + 'script>';
+      }
+      function setPos(btn, pos) {
+        document.querySelectorAll('.seg button').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var bubble = document.getElementById('live-bubble');
+        var panel = document.getElementById('live-panel');
+        if (pos === 'left') {
+          bubble.style.left = '20px'; bubble.style.right = 'auto';
+          panel.style.left = '20px'; panel.style.right = 'auto';
+        } else {
+          bubble.style.right = '20px'; bubble.style.left = 'auto';
+          panel.style.right = '20px'; panel.style.left = 'auto';
+        }
+      }
+      function updatePreview() {
+        document.getElementById('live-greeting').textContent = document.getElementById('cfg-greeting').value;
+      }
+    </script>
 </body>
 
 </html>
