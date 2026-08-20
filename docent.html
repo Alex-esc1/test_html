@@ -2445,7 +2445,7 @@
           <h2>What should your chatbot be called?</h2>
           <p class="ob-sub">Customers will see this name in the chat window and the website widget. You can change it
             later.</p>
-          <input type="text" id="ob-bot-name" placeholder="e.g. Bramble Care" value="Bramble Care">
+          <input type="text" id="ob-bot-name" placeholder="e.g. Bramble Care">
           <div class="ob-hint">Tip: name it after the job it does, not your company — "Support" beats "Acme Bot."</div>
           <div class="ob-actions">
             <button class="btn btn-brass" onclick="obNext(2)">Continue →</button>
@@ -2834,7 +2834,7 @@
               </div>
               <div class="widget-bubble" id="live-bubble"
                 style="right:20px; left:auto; bottom:20px; background:#B8924A;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14171F" stroke-width="2">
+                <svg id="live-bubble-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14171F" stroke-width="2">
                   <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-.97L3 20l1.02-5.4A8.5 8.5 0 1 1 21 11.5Z" />
                 </svg>
               </div>
@@ -3112,18 +3112,27 @@
       var u = document.createElement('div'); u.className = 'msg user'; u.textContent = text;
       scroll.appendChild(u);
       input.value = '';
+      scroll.scrollTop = scroll.scrollHeight;
+      var greetings = ['hi', 'hello', 'hey', 'привет', 'здравствуй', 'здравствуйте', 'ку', 'йо', 'yo'];
+      var isGreeting = greetings.indexOf(text.toLowerCase().replace(/[!.,?]/g, '').trim()) !== -1;
       setTimeout(function () {
         var b = document.createElement('div'); b.className = 'msg bot';
-        b.innerHTML = "Good question — here's what our docs say, based on the closest match I could find.<div class=\"src\">↳ help.bramble.co</div>";
+        if (isGreeting) {
+          b.textContent = "Hi there! What can I help you find in the docs?";
+        } else {
+          b.innerHTML = "Good question — here's what our docs say, based on the closest match I could find.<div class=\"src\">↳ help.bramble.co</div>";
+        }
         scroll.appendChild(b);
         scroll.scrollTop = scroll.scrollHeight;
       }, 500);
-      scroll.scrollTop = scroll.scrollHeight;
     }
     function setColor(el, color) {
       document.querySelectorAll('.swatch').forEach(function (s) { s.classList.remove('active'); });
       el.classList.add('active');
       document.getElementById('live-bubble').style.background = color;
+      var r = parseInt(color.substr(1, 2), 16), g = parseInt(color.substr(3, 2), 16), b = parseInt(color.substr(5, 2), 16);
+      var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+      document.getElementById('live-bubble-icon').setAttribute('stroke', brightness > 150 ? '#14171F' : '#F4F1EA');
       document.getElementById('embed-code-app').textContent = '<script src="https://cdn.docent.chat/widget.js" data-bot="bramble-care" data-color="' + color + '"></' + 'script>';
     }
     function setPos(btn, pos) {
